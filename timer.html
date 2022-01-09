@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="timer.css" />
+    <title>Membuat Aplikasi Countdown Timer dengan JavaScript</title>
+  </head>
+  <body>
+    <h1>Countdown Timer</h1>
+
+    <div class="fullteam">
+      <div class="jam_analog_javascript">
+        <div class="xxx">
+          <div class="jarum jarum_detik"></div>
+          <div class="jarum jarum_menit"></div>
+          <div class="jarum jarum_jam"></div>
+          <div class="lingkaran_tengah"></div>
+        </div>
+      </div>
+      <div id="container">
+        <p id="hour-label" class="label">Hours</p>
+        <p id="min-label" class="label">Minutes</p>
+        <p id="sec-label" class="label">Seconds</p>
+        <input id="hour" type="number" max="99" min="0" value="0" class="time" />
+        <p id="p1" class="semicolon">:</p>
+        <input id="minute" type="number" max="60" min="0" value="0" class="time" />
+        <p id="p2" class="semicolon">:</p>
+        <input id="sec" type="number" max="60" min="0" value="0" class="time" />
+        <button id="start" class="btn">Start</button>
+        <button id="reset" class="btn">Reset</button>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      const secondHand = document.querySelector(".jarum_detik");
+      const minuteHand = document.querySelector(".jarum_menit");
+      const jarum_jam = document.querySelector(".jarum_jam");
+      function setDate() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const secondsDegrees = (seconds / 60) * 360 + 90;
+        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+        if (secondsDegrees === 90) {
+          secondHand.style.transition = "none";
+        } else if (secondsDegrees >= 91) {
+          secondHand.style.transition = "all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)";
+        }
+        const minutes = now.getMinutes();
+        const minutesDegrees = (minutes / 60) * 360 + 90;
+        minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
+        const hours = now.getHours();
+        const hoursDegrees = (hours / 12) * 360 + 90;
+        jarum_jam.style.transform = `rotate(${hoursDegrees}deg)`;
+      }
+      setInterval(setDate, 1000);
+    </script>
+
+    <script>
+      var start = document.getElementById("start");
+      var reset = document.getElementById("reset");
+
+      var h = document.getElementById("hour");
+      var m = document.getElementById("minute");
+      var s = document.getElementById("sec");
+
+      //store a reference to the startTimer variable
+      var startTimer = null;
+
+      start.addEventListener("click", function () {
+        //initialize the variable
+        function startInterval() {
+          startTimer = setInterval(function () {
+            timer();
+          }, 1000);
+        }
+        startInterval();
+      });
+
+      reset.addEventListener("click", function () {
+        h.value = 0;
+        m.value = 0;
+        s.value = 0;
+        //stop the timer after pressing "reset"
+        stopInterval();
+      });
+
+      function timer() {
+        if (h.value == 0 && m.value == 0 && s.value == 0) {
+          h.value = 0;
+          m.value = 0;
+          s.value = 0;
+        } else if (s.value != 0) {
+          s.value--;
+        } else if (m.value != 0 && s.value == 0) {
+          s.value = 59;
+          m.value--;
+        } else if (h.value != 0 && m.value == 0) {
+          m.value = 60;
+          h.value--;
+        }
+        if (h.value) {
+          alert("waktu sudah habis");
+        }
+        return;
+      }
+
+      //stop the function after pressing the reset button,
+      //so the time wont go down when selecting a new time after pressing reset
+      function stopInterval() {
+        clearInterval(startTimer);
+      }
+    </script>
+  </body>
+</html>

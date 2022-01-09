@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<style>
+    button {
+        background-color: #94B3FD;
+        border-radius: 5px;
+    }
+    body{
+        background-color: #94DAFF;
+    }
+    .container {
+        margin-left: auto;
+    }
+    input {
+        background-color: #94DAFF;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input class="form-copy" id="username">
+        <button class="btn-copy" onclick="copyText()">
+        <span class="fa fa-copy"></span> COPY
+        </button>
+    </div>
+    <script>
+        function copyText() {  
+    var copyText = document.getElementById("username");  
+    copyText.select();  
+    document.execCommand("copy");
+}
+    </script>
+</body>
+<br>
+<body>
+    <div class="container">
+ <input class="form-pass" id="password">
+ <button class="btn-pass" onclick="copyPass()">
+ <span class="fa fa-copy"></span> COPY
+</button>
+</div>
+    <script>
+    function copyPass() {  
+    var copyText = document.getElementById("password");  
+    copyText.select();  
+    document.execCommand("copy");
+}
+    </script>
+</body>
+</html>
+

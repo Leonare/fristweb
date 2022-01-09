@@ -1,0 +1,214 @@
+body {
+    background-color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    background-color: #ffffff;
+    margin: auto;
+    overflow: auto;
+
+}
+
+.container .headerweb img {
+    width: 100%;
+    margin-bottom: -130px;
+}
+
+.nav {
+    background-color: #353535;
+    padding: 15px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-transform: capitalize;
+}
+
+.nav a:hover {
+    background-size: cover;
+    border: 1px solid white;
+}
+
+
+.coloum1 {
+    width: 10%;
+    height: 1000px;
+    background-color: #ffffff;
+    float: left;
+    margin: 20px;
+    padding: 5px;
+    border: #ffffff;
+    box-sizing: border-box;
+}
+
+.coloum2 {
+    width: 50%;
+    height: 1000px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    padding: 20px;
+    border-right: 1px solid black;
+}
+
+.coloum3 {
+    width: 31.9%;
+    height: 1000px;
+    background-color: #ffffff;
+    float: right;
+    padding: 20px;
+    border: #ffffff;
+}
+
+.coloum1 .tombol img {
+    width: 80%;
+    padding: 20px;
+    transition: all .4s;
+}
+
+.coloum1 .tombol img:hover {
+    background-color: #e6cb46;
+}
+
+
+.coloum2 .head1 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    background-color: #1d507b;
+    color: rgb(255, 255, 255);
+    margin: -20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-right: 1px solid black;
+}
+
+.coloum2 .isikonten {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.coloum2 .feture a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 5px;
+}
+
+.coloum2 .feture li {
+    padding-top: 7px;
+}
+
+.coloum2 .feture a:hover {
+    border: 1px solid black;
+}
+
+.coloum2 .daftar {
+    border-bottom: 1px solid black;
+    padding: 20px;
+    margin-top: -10px;
+}
+
+.coloum2 details:hover {
+    border: 1px solid black;
+}
+
+.coloum2 .pemberitahuan small {
+    margin-top: -10px;
+}
+
+.container button {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6cb46;
+    font-size: 10px;
+    border: 1px solid #e6cb46;
+    margin-left: 2%;
+    color: white;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.container button:hover {
+    background-color: #1d507b;
+}
+
+.coloum3 .gambar img {
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: auto;
+    transition: all .2s;
+}
+
+.coloum3 .gambar img:hover {
+    width: 90%;
+}
+
+.coloum3 .head2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    margin-top: -10px;
+    width: 100%;
+}
+
+.coloum3 .smal {
+    margin-top: -20px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.coloum3 .header2 {
+    background-color: #1d507b;
+    color: white;
+    margin: -20px;
+    margin-top: -20px;
+    padding: 1px;
+    margin-bottom: 20px;
+    margin-left: -21px;
+    text-align: center;
+}
+
+
+
+
+
+
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.coloum2 .head1 .container1 .row .btn-warning {
+    width: 0px;
+    height: 10px;
+    color: green;
+}

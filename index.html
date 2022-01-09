@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content.css">
+    <title>KamarKita</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="headerweb"><img src="freepik/20210928_190504.jpg" alt=""></div>
+        <button class="btn-warning" onclick="notifikasi()">
+            Quotes Hari ini
+        </button>
+        <div class="nav">
+            <a href="#">feature</a>
+            <a href="#">service</a>
+            <a href="#">about</a>
+            <a href="#">contact</a>
+            <a href="#">credit</a>
+        </div>
+        <iv class="konten">
+            <div class="coloum1">
+                <div class="tombol">
+                    <a href="https://mathsolver.microsoft.com/en"><img src="freepik/logo__1_-removebg-preview.png" alt=""></a>
+                    <a href="todolist.html"><img src="freepik/logo__2_-removebg-preview.png" alt=""></a>
+                    <a href=""><img src="freepik/logo__3_-removebg-preview.png" alt=""></a>
+                    <a href=""><img src="freepik/logo__4_-removebg-preview.png" alt=""></a>
+                    <a href="timer.html"><img src="freepik/TIMER-removebg-preview (1).png" alt=""></a>
+                </div>
+            </div>
+            <div class="coloum2">
+                <h2 class="head1">Fitur Kamarangga</h2>
+                        <details class="daftar">
+                            <summary>
+                            Daftar Fitur
+                            </summary>
+                            <ul class="feture">
+                                <li> <a href="#jadwal"> Jadwal Harian</a></li>
+                                <li><a href="#">To Do list</a></li>
+                                <li><a href="#">Web Catatan</a></li>
+                                <li><a href="">Kalkulator</a></li>
+                            </ul>
+                        </details>
+                            
+                <div class="isikonten">
+                            
+                    <h3>Jadwal Harian</h3>
+                    <p>Fitur ini memungkinkan untuk mengingatkan kita tenang jadwal pelajaran yang sudah tertera di web (notifikasi sedang dikembangkan). untuk saat ini hanya dapat melihat jadawal dari web saja.</p>
+                    <h3>To Do List</h3>
+                    <p>Fitur ini memungkinkan kita untuk mengatur pekerjaan yang ingin kita lakukan untuk jangka waktu tertentu yang sudah diatur oleh pengguna web. (sedang dikembangkan) </p>
+                    <h3>Web Catatan</h3>
+                    <p>Fitur dari web yang menyediakan beberapa web yang akan membantumu untuk menemukan materi materi pelajaran, dan web yang direkomendasikan worth it untuk penggunanya. (penambahan web bisa dari contact)</p>
+                    <h3>Kalkulator</h3>
+                    <p>Fitur dari kalkulator. kalkulator yang dipilih adalah math solver dikarnakan kalkulator ini memiliki banyak fitur untuk perhitungan, dan memiliki urutan cara yang diperlukan dalam mengitung. </p>
+                    <h3>Timer</h3>
+                    <p>Timer dapat digunakan untuk menjadwalkan berapa lama waktu belajar yang diinginkan dalam satuan waktu</p>
+                    <div class="pemberitahuan"><h4>*Fitur diatas dapat ditemukan di kolom sebelah kiri</h4>
+                    <small>request fitur bisa melewati contact</small>
+                    </div>
+                </div>
+            </div>
+            <div class="coloum3">
+                <div class="header2">
+                    <div class="head2">
+                    <h2>Web Rekomendasi</h2>
+                    </div>
+                    <div class="smal">
+                    <small>*klik gambar untuk menuju website</small>
+                    </div>
+                </div>    
+                <div class="gambar">
+                    <a href="https://www.quipper.com/id"><img src="web/logo (2).png">
+                    </a>
+                    <a href="https://dictionary.cambridge.org"><img src="web/logo (3).png" >
+                    </a>
+                    <a href="https://materi78.wordpress.com/"><img src="web/logo (4).png" >
+                    </a>
+                    <a href="https://ambisnotes.com"><img src="web/logo (5).png" >
+                    </a>
+                    <a href=""><img src="web/logo (1).png" ></a>
+                </div>
+            </div>
+            <div class="coloum4">
+                <!-- Jquery -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                
+                <!-- Notifikasi Script -->
+                <script>
+                    $(document).ready(function() {
+                            if (Notification.permission !== "granted")
+                            Notification.requestPermission();
+                    });
+                    
+                    function notifikasi() {
+                        if (!Notification) {
+                            alert('Browsermu tidak mendukung Web Notification.'); 
+                            return;
+                        }
+                        if (Notification.permission !== "granted")
+                            Notification.requestPermission();
+                        else {
+                            var notifikasi = new Notification('Quotes of the day', {
+                                icon: 'freepik/KA-logo.jpg',
+                                body: "Gagal itu urusan nanti. Aku tau kamu hebat :) ",
+                            });
+                            notifikasi.onclick = function () {
+                                window.open("http://goo.gl/dIf4s1");      
+                            };
+                            setTimeout(function(){
+                                notifikasi.close();
+                            }, 5000);
+                        }
+                    };
+                </script>
+            </div>
+        </div>
+                
+                
+                
+    </div>
+</body>
+</html>

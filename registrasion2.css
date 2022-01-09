@@ -1,0 +1,83 @@
+body {
+    background-color: #00A0E3;
+    background-size: 350px;
+}
+
+.template {
+    background-color: white;
+    border: white;
+    border-radius: 20px;
+    width: 300px;
+    height: 450px;
+    margin: 100px auto 50px;
+    box-shadow: 3px 3px 3px;
+
+}
+
+.template .image .headcard {
+    width: 250px;
+    height: 150px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    margin-left: 25px;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.template .image .ajak {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: -150px;
+    margin-left: 40px;
+    margin-bottom: 90px;
+    line-height: 3px;
+}
+
+.form {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+}
+
+.form input {
+    width: 78%;
+    padding: 7px;
+    margin: 5px;
+    border: none;
+    border-bottom: 1px solid #0099ff;
+    transition: all .4s;
+}
+
+.form input:hover {
+    border: 1px solid #e6cb46;
+}
+
+.form button {
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 5px;
+    background-color: #008cff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.form button:hover {
+    background-color: #e6cb46;
+}
+
+.copyright {
+    font-size: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    line-height: 3px;
+}
+
+.copyright .reg {
+    text-decoration: none;
+}
